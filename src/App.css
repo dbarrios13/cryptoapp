@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.profitGreen {
+  color: #00A300;
+}
+
+.lossRed {
+  color: #EB0300;
+}
+
+.navlinks {
+  text-decoration: none;
+}
