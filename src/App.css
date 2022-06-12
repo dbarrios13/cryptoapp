@@ -47,4 +47,14 @@
 
 .navlinks {
   text-decoration: none;
+  color: #3f3e49;
+}
+
+.activelink {
+  text-decoration: none;
+  color: #3f6fb3;
+}
+
+.nav-item {
+  padding: 10px 10px;
 }

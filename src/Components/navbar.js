@@ -1,39 +1,30 @@
 import { Nav } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function NavbarComponent() {
+    let navlink = "navlinks";
+    let activelink = "activelink";
+
     return (
         <>
-            <Nav variant="tabs" defaultActiveKey="/">
+            <Nav fill variant="tabs" defaultActiveKey="/">
                 <Nav.Item>
-                    <Nav.Link>
-                        <Link to="/" className="navlinks">Open Orders</Link>
-                    </Nav.Link>
+                    <NavLink to="/" className={({ isActive }) => isActive ? activelink : navlink}>Open Orders</NavLink>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link>
-                        <Link to="/closed" className="navlinks">Closed Order</Link>
-                    </Nav.Link>
+                    <NavLink to="/closed" className={({ isActive }) => isActive ? activelink : navlink}>Closed Order</NavLink>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="disabled" disabled>
-                        All Orders
-                    </Nav.Link>
+                    All Orders
                 </Nav.Item>
                 <Nav.Item >
-                    <Nav.Link eventKey="disabled" disabled>
-                        Profit: <span className="profitGreen" >$100</span>
-                    </Nav.Link>
+                    Profit: <span className="profitGreen" >$100</span>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="disabled" disabled>
-                        Loss: <span className="lossRed">-$5</span>
-                    </Nav.Link>
+                    Loss: <span className="lossRed">-$5</span>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="disabled" disabled>
-                        Total: <span className="">$95</span>
-                    </Nav.Link>
+                    Total: <span className="">$95</span>
                 </Nav.Item>
             </Nav>
         </>
